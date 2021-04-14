@@ -17,8 +17,10 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     count += 1
     if (sprite.get(LedSpriteProperty.X) == 2) {
+        music.playTone(523, music.beat(BeatFraction.Whole))
         game.addScore(1)
     } else {
+        music.playTone(262, music.beat(BeatFraction.Whole))
         game.addScore(-1)
     }
     if (count % 3 == 0) {
